@@ -30,7 +30,7 @@ app.get('/submit', (req, res) => {
   })
 })
 
-app.post('/credentials', (req, res) => {
+app.post('/code', (req, res) => {
   if ('dVin' in req.body) {
     data.dVin = req.body.dVin;
     res.send('success');

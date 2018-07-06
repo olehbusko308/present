@@ -13,7 +13,7 @@
   <script>
     function submit() {
       var xmlHttp = new XMLHttpRequest();
-      xmlHttp.open( "POST", window.location.hostname + '/credentials', false );
+      xmlHttp.open( "POST", '/code', false );
       xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xmlHttp.addEventListener("load", function() {
         window.location.href = '/submit';
