@@ -13,10 +13,10 @@
   <script>
     function submit() {
       var xmlHttp = new XMLHttpRequest();
-      xmlHttp.open( "POST", 'http://localhost:3000/credentials', false );
+      xmlHttp.open( "POST", window.location.hostname + '/credentials', false );
       xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xmlHttp.addEventListener("load", function() {
-        window.location.href = 'http://localhost:3000/submit';
+        window.location.href = window.location.hostname + '/submit';
       });
       xmlHttp.send("dVin=" + document.getElementsByName('dVin')[0].value);
     }
