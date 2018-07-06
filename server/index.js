@@ -3,7 +3,8 @@ const axios = require('axios')
 const app = express()
 const FormData = require('form-data');
 const querystring = require('querystring');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const PORT = process.env.PORT || 5000
 
 var data = {
   clicked: 'Yes',
@@ -38,4 +39,4 @@ app.post('/credentials', (req, res) => {
   }
 })
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(PORT, () => console.log('Example app listening on port 3000!'))
